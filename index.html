@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Progress Navigation</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,600,700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <!--
+        Create Tabs component, that has several tab buttons. Each button toggles active tab content.
+        Add a text input with a button. User can enter any tab index in the input and toggle it by clicking the button.
+        Indexes in this task are not the same as they are used in JS, so by entering 1 - first tab should be shown, not 0.
+        If invalid index is entered - browser must show an alert.
+    -->
+    <div class="container">
+      <div class="form-box">
+        <form class="form" action="index.html" method="post">
+          <!--
+            action is the url that processes the form submission
+            method is the HTTP method to submit the form with
+            POST sends a request to the web server to accept the contents within the body of the request message
+          -->
+          <input id="tab-number-input" type="number" name="tab-number" placeholder="Enter tab index" step="1" min="1" max="3">
+          <!--
+            name is the name of the input form control; this will be submitted with the value of the input when the request is submitted
+          -->
+          <button class="btn" type="button" name="button">Change Tab</button>
+          <!--
+            button with type of button does nothing when clicked
+            name is sent along with the button's value as a pair when the form is submitted
+          -->
+        </form>
+      </div>
+      
+      <div class="tab-box">
+        <div class="tabs">
+          <p id="tab-1" class="tab clicked">Tab 1</p>
+          <p id="tab-2" class="tab unclicked">Tab 2</p>
+          <p id="tab-3" class="tab unclicked">Tab 3</p>
+        </div>
+        <div class="tab-content">
+          <p class="tab-content-para">Tab 1 Content</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scripts/index.js" charset="utf-8"></script>
+  </body>
+</html>
